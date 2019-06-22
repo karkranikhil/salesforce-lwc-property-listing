@@ -1,9 +1,7 @@
-# SFDX App
+#  Salesforce Property Listing
+### Basic Demo to demostrate the functionalities of Lightning web components
 
-## Dev, Build and Test
-
-## Resources
-
-## Description of Files and Directories
-
-## Issues
+## Final result
+<img src="./images/main.png" alt="main screen">
+<hr/>
+<img src="./images/description.png" alt="description screen">
