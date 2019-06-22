@@ -1,0 +1,11 @@
+<template>
+    <lightning-card title="first component" icon-name="custom:custom8">
+        <div>
+            Name:<input class="txtInput" value={textBoxValue} onchange={txtBoxHandler}/>
+            <lightning-button label="Greet" onclick={greetUser}>
+
+            </lightning-button>
+            <p>Hello, {greeting}</p>
+        </div>
+    </lightning-card>
+</template>

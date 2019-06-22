@@ -1,0 +1,47 @@
+{
+    "compilerOptions": {
+        "experimentalDecorators": true,
+        "baseUrl": ".",
+        "paths": {
+            "c/GreetTextLWC": [
+                "GreetTextLWC/GreetTextLWC.js"
+            ],
+            "c/greetTextLWC": [
+                "greetTextLWC/greetTextLWC.js"
+            ],
+            "c/BookingHeaderLWC": [
+                "BookingHeaderLWC/BookingHeaderLWC.js"
+            ],
+            "c/bookingHeaderLWC": [
+                "bookingHeaderLWC/bookingHeaderLWC.js"
+            ],
+            "c/propertyListLWC": [
+                "propertyListLWC/propertyListLWC.js"
+            ],
+            "c/pubsub": [
+                "pubsub/pubsub.js"
+            ],
+            "c/handleEvent": [
+                "handleEvent/handleEvent.js"
+            ],
+            "c/registerEvent": [
+                "registerEvent/registerEvent.js"
+            ],
+            "c/data": [
+                "data/data.js"
+            ],
+            "c/roomList": [
+                "roomList/roomList.js"
+            ]
+        }
+    },
+    "include": [
+        "**/*",
+        "../../../../.sfdx/typings/lwc/**/*.d.ts"
+    ],
+    "typeAcquisition": {
+        "include": [
+            "jest"
+        ]
+    }
+}

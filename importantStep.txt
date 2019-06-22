@@ -1,0 +1,6 @@
+1)cmd+shift+p ->create project with manifest
+2) sfdx force:auth:web:login --setdefaultdevhubusername --setalias scracth_17jun
+3) create default scratch org
+4) sfdx force:org:list
+5) sfdx force:org:open -u scratch_17june // open scratch
+6) sfdx force:source:push // to push the code to org

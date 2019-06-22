@@ -1,0 +1,21 @@
+<template>
+           <!--Registering the event-->
+           <c-register-event name="propertyidevent" namespace="property" class="propertyid-event"></c-register-event>
+
+        <template if:true={showProperties}>
+                <div class="card-wrapper">
+                <template for:each={filteredPropertyList} for:item='property'>
+                        <div class="card" key={property.id}>
+                                <img src={property.imageUrl} alt="Avatar" style="width:100%"/>
+                                <div class="card-container">
+                                  <p class="property-details">{property.priceCurrency}{property.price} {property.status}</p> 
+                                  <p class="description">{property.description}</p> 
+                                  <div class="text-right">
+                                    <lightning-button variant="brand" data-id={property.id} label="View more" title="View more" onclick={viewMoreHandler} class="slds-m-left_x-small"></lightning-button>
+                                  </div>
+                                </div>
+                        </div>
+                    </template>
+                    </div>
+                </template>
+</template>

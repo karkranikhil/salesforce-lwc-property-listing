@@ -1,0 +1,4 @@
+{
+  "salesforcedx-vscode-core.push-or-deploy-on-save.enabled": false,
+  "eslint.nodePath": "/Users/nikhilkarkra/.vscode/extensions/salesforce.salesforcedx-vscode-lwc-46.1.0/node_modules"
+}

@@ -1,0 +1,72 @@
+
+<template>
+    
+    <c-handle-event name="propertyidevent" namespace="property" onaction={handlePropertyEvent}></c-handle-event>
+    <template if:true={showProperties}>
+            <div onkeyup={filterHandler}>
+                    <lightning-input
+                        name="enter-search"
+                        label=""
+                        type="search"
+                        placeholder="Search by description"
+                        class="margin-lr2"
+                    ></lightning-input>
+                </div>
+            
+                <c-room-list filtered-property-list={filteredPropertyList} ></c-room-list>
+    </template>
+    <template if:false={showProperties}>
+        <h1 class="goback margin-lr2" onclick={gobackToListing}>Back to Property List</h1>
+      
+                
+                <template for:each={selectedPropertyDetails} for:item='property'>
+                        <div class="margin-lr2" key={property.id}>
+                                <p class="heading-text"><strong>{property.main_heading}</strong></p>
+                                <p class="sub-heading-text">{property.main_description}</p>
+                        </div>
+                        <div class="full-card-wrapper" key={property.id}>
+                        
+                                <div class="full-card" >
+                                        <div class="card-container">
+                                                <p class="property-details heading-text">{property.priceCurrency}{property.price} {property.status}</p> 
+                                                <p class="description sub-heading-text">{property.description}</p>
+                                        </div>
+                                        <img src={property.imageUrl} alt="Avatar" style="width:100%"/>
+                                        
+                                </div>
+                                <div class="full-card" key={property.id}>
+        
+                                        <p class="sub-heading-text"><strong>{property.details.feature_heading}</strong></p>
+                                        <ul class="feature-list">
+                                        <template for:each={property.details.feature_list} for:item='feature'>
+                                                <li key={feature}>{feature}</li>
+                                        </template>
+                                        </ul>
+                                        <hr></hr>
+                                        <p class="sub-heading-text"><strong>General Features</strong></p>
+                                        <p class="font-16"><strong>Property Type:</strong>{property.details.General_Features.Property_Type}</p>
+                                        <p class="font-16"><strong>Bedrooms:</strong>{property.details.General_Features.Bedroom}</p>
+                                        <p class="font-16"><strong>Bathrooms:</strong>{property.details.General_Features.Bathrooms}</p>
+                                        <p class="font-16"><strong>Price per calendar month:</strong>{property.details.General_Features.Price_month}</p>
+                                        <p class="font-16"><strong>Bond:</strong>{property.details.General_Features.Bond}</p>
+                                        <hr></hr>
+                                        <p class="sub-heading-text"><strong>Allowances</strong></p>
+                                        <ul class="allownce-list">
+                                        <template for:each={property.details.Allowances} for:item='allownce'>
+                                                <li key={allownce}>{allownce}</li>
+                                        </template>
+                                        </ul>
+                                        <hr></hr>
+                                        <p class="sub-heading-text"><strong>Indoor Features</strong></p>
+                                        <ul class="indoor-list">
+                                                <template for:each={property.details.Indoor_Features} for:item='indoor'>
+                                                        <li key={indoor}>{indoor}</li>
+                                                </template>
+                                        </ul>
+                                </div>
+                        </div>
+                        
+                    </template>
+    </template>
+    
+</template>
